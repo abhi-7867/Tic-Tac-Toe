@@ -1,2 +1,7 @@
 # Compiled Java classes
 *.class
+
+# IDE files
+.idea/
+.vscode/
+*.iml
