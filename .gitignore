@@ -8,3 +8,13 @@
 *.project
 *.classpath
 .settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build directories
+bin/
+out/
+build/
+target/
