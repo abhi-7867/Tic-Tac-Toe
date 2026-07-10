@@ -27,5 +27,7 @@ public class TicTacToeGame {
                 board[i][j] = ' ';
             }
         }
+        currentPlayer = 'X';
+        movesCount = 0;
     }
 }
