@@ -33,11 +33,15 @@ public class TicTacToeGame {
 
     public void displayBoard() {
         System.out.println();
-        System.out.println("  " + board[0][0] + " | " + board[0][1] + " | " + board[0][2]);
-        System.out.println(" ___|___|___ ");
-        System.out.println("  " + board[1][0] + " | " + board[1][1] + " | " + board[1][2]);
-        System.out.println(" ___|___|___ ");
-        System.out.println("  " + board[2][0] + " | " + board[2][1] + " | " + board[2][2]);
+        System.out.println("     |     |     ");
+        System.out.println(String.format("  %s  |  %s  |  %s  ", board[0][0], board[0][1], board[0][2]));
+        System.out.println("_____|_____|_____");
+        System.out.println("     |     |     ");
+        System.out.println(String.format("  %s  |  %s  |  %s  ", board[1][0], board[1][1], board[1][2]));
+        System.out.println("_____|_____|_____");
+        System.out.println("     |     |     ");
+        System.out.println(String.format("  %s  |  %s  |  %s  ", board[2][0], board[2][1], board[2][2]));
+        System.out.println("     |     |     ");
         System.out.println();
     }
 }
