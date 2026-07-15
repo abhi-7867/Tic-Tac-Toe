@@ -51,4 +51,7 @@ public class TicTacToeGame {
     public void switchPlayer() {
         currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
     }
+    private boolean isValidMove(int row, int col) {
+        return board[row][col] == ' ';
+    }
 }
