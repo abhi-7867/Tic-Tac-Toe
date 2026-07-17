@@ -54,7 +54,8 @@ public class TicTacToeGame {
     private boolean isValidMove(int row, int col) {
         return board[row][col] == ' ';
     }
-    // Coordinate mapping helper comment:
-    // int row = (position - 1) / 3;
-    // int col = (position - 1) % 3;
+    public void playerMove() {
+        System.out.print("Player " + currentPlayer + ", enter your move (1-9): ");
+        int position = scanner.nextInt();
+    }
 }
