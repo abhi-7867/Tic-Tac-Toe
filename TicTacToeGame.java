@@ -60,6 +60,10 @@ public class TicTacToeGame {
         if (position >= 1 && position <= 9) {
             int row = (position - 1) / 3;
             int col = (position - 1) % 3;
+            if (isValidMove(row, col)) {
+                board[row][col] = currentPlayer;
+                movesCount++;
+            }
         }
     }
 }
