@@ -57,5 +57,9 @@ public class TicTacToeGame {
     public void playerMove() {
         System.out.print("Player " + currentPlayer + ", enter your move (1-9): ");
         int position = scanner.nextInt();
+        if (position >= 1 && position <= 9) {
+            int row = (position - 1) / 3;
+            int col = (position - 1) % 3;
+        }
     }
 }
