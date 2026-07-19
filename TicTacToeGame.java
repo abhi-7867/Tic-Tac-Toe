@@ -63,6 +63,8 @@ public class TicTacToeGame {
             if (isValidMove(row, col)) {
                 board[row][col] = currentPlayer;
                 movesCount++;
+            } else {
+                System.out.println("Invalid move! Position already taken. Try again.");
             }
         }
     }
