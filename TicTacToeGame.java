@@ -77,4 +77,13 @@ public class TicTacToeGame {
             }
         }
     }
+    public boolean checkWin() {
+        for (int i = 0; i < 3; i++) {
+            if (board[i][0] == currentPlayer && board[i][1] == currentPlayer &&
+                    board[i][2] == currentPlayer) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
