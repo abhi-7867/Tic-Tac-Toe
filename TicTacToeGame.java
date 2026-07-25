@@ -100,4 +100,7 @@ public class TicTacToeGame {
         }
         return false;
     }
+    public boolean checkDraw() {
+        return movesCount == 9;
+    }
 }
