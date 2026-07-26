@@ -103,4 +103,7 @@ public class TicTacToeGame {
     public boolean checkDraw() {
         return movesCount == 9;
     }
+    public void displayWinMessage() {
+        System.out.println("Congratulations! Player " + currentPlayer + " WINS!");
+    }
 }
