@@ -105,5 +105,10 @@ public class TicTacToeGame {
     }
     public void displayWinMessage() {
         System.out.println("Congratulations! Player " + currentPlayer + " WINS!");
+        if (currentPlayer == 'X') {
+            player1Wins++;
+        } else {
+            player2Wins++;
+        }
     }
 }
