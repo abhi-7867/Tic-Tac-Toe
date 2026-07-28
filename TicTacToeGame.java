@@ -111,4 +111,8 @@ public class TicTacToeGame {
             player2Wins++;
         }
     }
+    public void displayDrawMessage() {
+        System.out.println("It's a draw!");
+        draws++;
+    }
 }
