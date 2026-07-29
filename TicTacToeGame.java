@@ -118,4 +118,7 @@ public class TicTacToeGame {
     public int getPlayer1Wins() {
         return player1Wins;
     }
+    public int getPlayer2Wins() {
+        return player2Wins;
+    }
 }
