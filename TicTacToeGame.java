@@ -115,4 +115,7 @@ public class TicTacToeGame {
         System.out.println("It's a draw!");
         draws++;
     }
+    public int getPlayer1Wins() {
+        return player1Wins;
+    }
 }
