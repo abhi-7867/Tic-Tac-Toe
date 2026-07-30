@@ -121,4 +121,7 @@ public class TicTacToeGame {
     public int getPlayer2Wins() {
         return player2Wins;
     }
+    public int getDraws() {
+        return draws;
+    }
 }
