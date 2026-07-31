@@ -124,4 +124,7 @@ public class TicTacToeGame {
     public int getDraws() {
         return draws;
     }
+    public void close() {
+        scanner.close();
+    }
 }
