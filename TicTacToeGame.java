@@ -127,4 +127,13 @@ public class TicTacToeGame {
     public void close() {
         scanner.close();
     }
+    public boolean playRound() {
+        initializeBoard();
+        displayBoard();
+        while (true) {
+            playerMove();
+            displayBoard();
+            switchPlayer();
+        }
+    }
 }
