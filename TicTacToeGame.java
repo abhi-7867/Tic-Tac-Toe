@@ -133,6 +133,14 @@ public class TicTacToeGame {
         while (true) {
             playerMove();
             displayBoard();
+            if (checkWin()) {
+                displayWinMessage();
+                return true;
+            }
+            if (checkDraw()) {
+                displayDrawMessage();
+                return false;
+            }
             switchPlayer();
         }
     }
