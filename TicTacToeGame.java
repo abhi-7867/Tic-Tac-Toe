@@ -12,6 +12,11 @@ public class TicTacToeGame {
     private int draws;
     private Scanner scanner;
 
+    private static final String RESET = "\033[0m";
+    private static final String RED = "\033[91m";
+    private static final String GREEN = "\033[92m";
+    private static final String YELLOW = "\033[93m";
+
     public TicTacToeGame() {
         board = new char[3][3];
         scanner = new Scanner(System.in);
