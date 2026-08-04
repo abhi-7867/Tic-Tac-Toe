@@ -16,6 +16,10 @@ public class TicTacToeGame {
     private static final String RED = "\033[91m";
     private static final String GREEN = "\033[92m";
     private static final String YELLOW = "\033[93m";
+    private static final String BLUE = "\033[94m";
+    private static final String PURPLE = "\033[95m";
+    private static final String CYAN = "\033[96m";
+    private static final String BOLD = "\033[1m";
 
     public TicTacToeGame() {
         board = new char[3][3];
