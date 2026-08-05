@@ -153,4 +153,12 @@ public class TicTacToeGame {
             switchPlayer();
         }
     }
+    private String colorizePlayer(char player) {
+        if (player == 'X') {
+            return RED + BOLD + player + RESET;
+        } else if (player == 'O') {
+            return GREEN + BOLD + player + RESET;
+        }
+        return " ";
+    }
 }
