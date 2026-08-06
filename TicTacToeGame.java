@@ -46,15 +46,26 @@ public class TicTacToeGame {
         System.out.println("        TIC TAC TOE BOARD");
         System.out.println("═══════════════════════════════════");
         System.out.println();
-        System.out.println("     |     |     ");
-        System.out.println(String.format("  %s  |  %s  |  %s  ", board[0][0], board[0][1], board[0][2]));
-        System.out.println("_____|_____|_____");
-        System.out.println("     |     |     ");
-        System.out.println(String.format("  %s  |  %s  |  %s  ", board[1][0], board[1][1], board[1][2]));
-        System.out.println("_____|_____|_____");
-        System.out.println("     |     |     ");
-        System.out.println(String.format("  %s  |  %s  |  %s  ", board[2][0], board[2][1], board[2][2]));
-        System.out.println("     |     |     ");
+        System.out.println(BLUE + "     |     |     " + RESET);
+        System.out.println(String.format(BLUE + "  %s  |  %s  |  %s  " + RESET,
+                colorizePlayer(board[0][0]),
+                colorizePlayer(board[0][1]),
+                colorizePlayer(board[0][2])));
+        System.out.println(BLUE + "_____|_____|_____" + RESET);
+
+        System.out.println(BLUE + "     |     |     " + RESET);
+        System.out.println(String.format(BLUE + "  %s  |  %s  |  %s  " + RESET,
+                colorizePlayer(board[1][0]),
+                colorizePlayer(board[1][1]),
+                colorizePlayer(board[1][2])));
+        System.out.println(BLUE + "_____|_____|_____" + RESET);
+
+        System.out.println(BLUE + "     |     |     " + RESET);
+        System.out.println(String.format(BLUE + "  %s  |  %s  |  %s  " + RESET,
+                colorizePlayer(board[2][0]),
+                colorizePlayer(board[2][1]),
+                colorizePlayer(board[2][2])));
+        System.out.println(BLUE + "     |     |     " + RESET);
         System.out.println();
     }
     public void switchPlayer() {
