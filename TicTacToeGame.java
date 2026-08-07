@@ -42,9 +42,9 @@ public class TicTacToeGame {
 
     public void displayBoard() {
         System.out.println();
-        System.out.println("═══════════════════════════════════");
-        System.out.println("        TIC TAC TOE BOARD");
-        System.out.println("═══════════════════════════════════");
+        System.out.println(CYAN + "═══════════════════════════════════" + RESET);
+        System.out.println(BOLD + PURPLE + "        TIC TAC TOE BOARD" + RESET);
+        System.out.println(CYAN + "═══════════════════════════════════" + RESET);
         System.out.println();
         System.out.println(BLUE + "     |     |     " + RESET);
         System.out.println(String.format(BLUE + "  %s  |  %s  |  %s  " + RESET,
