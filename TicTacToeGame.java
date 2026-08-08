@@ -77,7 +77,9 @@ public class TicTacToeGame {
     public void playerMove() {
         boolean validMove = false;
         while (!validMove) {
-            System.out.print("Player " + currentPlayer + ", enter your move (1-9): ");
+            System.out.println(YELLOW + "═══════════════════════════════════" + RESET);
+            System.out.print(BOLD + "Player " + colorizePlayer(currentPlayer) +
+                    RESET + BOLD + ", enter your move (1-9): " + RESET);
             int position = scanner.nextInt();
             scanner.nextLine();
 
