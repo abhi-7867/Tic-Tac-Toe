@@ -92,10 +92,12 @@ public class TicTacToeGame {
                     movesCount++;
                     validMove = true;
                 } else {
-                    System.out.println("Invalid move! Position already taken. Try again.");
+                    System.out.println(RED + "⚠ Invalid move! Position already taken. Try again." + RESET);
+                    System.out.println();
                 }
             } else {
-                System.out.println("Invalid input! Please enter a number between 1 and 9.");
+                System.out.println(RED + "⚠ Invalid input! Please enter a number between 1 and 9." + RESET);
+                System.out.println();
             }
         }
     }
