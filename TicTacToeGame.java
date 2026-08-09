@@ -128,7 +128,18 @@ public class TicTacToeGame {
         return movesCount == 9;
     }
     public void displayWinMessage() {
-        System.out.println("Congratulations! Player " + currentPlayer + " WINS!");
+        System.out.println();
+        System.out.println(GREEN + "╔═══════════════════════════════════╗" + RESET);
+        System.out.println(GREEN + "║                                   ║" + RESET);
+        System.out.println(
+                String.format(GREEN + "║  " + BOLD + "🎉 CONGRATULATIONS! 🎉" + RESET + GREEN + "        ║" + RESET));
+        System.out.println(
+                String.format(GREEN + "║  " + BOLD + "Player %s WINS!" + RESET + GREEN + "           ║" + RESET,
+                        colorizePlayer(currentPlayer)));
+        System.out.println(GREEN + "║                                   ║" + RESET);
+        System.out.println(GREEN + "╚═══════════════════════════════════╝" + RESET);
+        System.out.println();
+
         if (currentPlayer == 'X') {
             player1Wins++;
         } else {
