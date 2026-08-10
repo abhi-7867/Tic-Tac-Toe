@@ -147,7 +147,14 @@ public class TicTacToeGame {
         }
     }
     public void displayDrawMessage() {
-        System.out.println("It's a draw!");
+        System.out.println();
+        System.out.println(YELLOW + "╔═══════════════════════════════════╗" + RESET);
+        System.out.println(YELLOW + "║                                   ║" + RESET);
+        System.out.println(YELLOW + "║  " + BOLD + "🤝 IT'S A DRAW! 🤝" + RESET + YELLOW + "              ║" + RESET);
+        System.out.println(YELLOW + "║                                   ║" + RESET);
+        System.out.println(YELLOW + "╚═══════════════════════════════════╝" + RESET);
+        System.out.println();
+
         draws++;
     }
     public int getPlayer1Wins() {
