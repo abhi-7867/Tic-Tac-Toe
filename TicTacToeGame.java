@@ -194,4 +194,18 @@ public class TicTacToeGame {
         }
         return " ";
     }
+    public void displayStatistics() {
+        System.out.println();
+        System.out.println(CYAN + "╔═══════════════════════════════════╗" + RESET);
+        System.out.println(CYAN + "║" + BOLD + "        GAME STATISTICS" + RESET + CYAN + "          ║" + RESET);
+        System.out.println(CYAN + "╠═══════════════════════════════════╣" + RESET);
+        System.out.println(String.format(CYAN + "║" + RESET + "  Player X Wins: " + RED + BOLD + "%d" + RESET +
+                CYAN + "              ║" + RESET, player1Wins));
+        System.out.println(String.format(CYAN + "║" + RESET + "  Player O Wins: " + GREEN + BOLD + "%d" + RESET +
+                CYAN + "              ║" + RESET, player2Wins));
+        System.out.println(String.format(CYAN + "║" + RESET + "  Draws:         " + YELLOW + BOLD + "%d" + RESET +
+                CYAN + "              ║" + RESET, draws));
+        System.out.println(CYAN + "╚═══════════════════════════════════╝" + RESET);
+        System.out.println();
+    }
 }
