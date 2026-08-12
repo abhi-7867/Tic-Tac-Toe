@@ -208,4 +208,35 @@ public class TicTacToeGame {
         System.out.println(CYAN + "╚═══════════════════════════════════╝" + RESET);
         System.out.println();
     }
+    public void displayInstructions() {
+        System.out.println();
+        System.out.println(PURPLE + "╔═══════════════════════════════════════════════════════╗" + RESET);
+        System.out.println(PURPLE + "║" + BOLD + "                  GAME INSTRUCTIONS" + RESET + PURPLE
+                + "                  ║" + RESET);
+        System.out.println(PURPLE + "╠═══════════════════════════════════════════════════════╣" + RESET);
+        System.out.println(
+                PURPLE + "║" + RESET + "  • This is a two-player Tic-Tac-Toe game           " + PURPLE + "║" + RESET);
+        System.out.println(
+                PURPLE + "║" + RESET + "  • Players take turns placing their symbol         " + PURPLE + "║" + RESET);
+        System.out.println(
+                PURPLE + "║" + RESET + "  • To place your symbol, enter a number (1-9)       " + PURPLE + "║" + RESET);
+        System.out.println(
+                PURPLE + "║" + RESET + "  • The board layout is as follows:                  " + PURPLE + "║" + RESET);
+        System.out.println(PURPLE + "║                                                        " + PURPLE + "║" + RESET);
+        System.out.println(
+                PURPLE + "║" + RESET + "                     1 | 2 | 3                      " + PURPLE + "║" + RESET);
+        System.out.println(
+                PURPLE + "║" + RESET + "                    ---|---|---                      " + PURPLE + "║" + RESET);
+        System.out.println(
+                PURPLE + "║" + RESET + "                     4 | 5 | 6                      " + PURPLE + "║" + RESET);
+        System.out.println(
+                PURPLE + "║" + RESET + "                    ---|---|---                      " + PURPLE + "║" + RESET);
+        System.out.println(
+                PURPLE + "║" + RESET + "                     7 | 8 | 9                      " + PURPLE + "║" + RESET);
+        System.out.println(PURPLE + "║                                                        " + PURPLE + "║" + RESET);
+        System.out.println(
+                PURPLE + "║" + RESET + "  • First player to get 3 in a row wins!            " + PURPLE + "║" + RESET);
+        System.out.println(PURPLE + "╚═══════════════════════════════════════════════════════╝" + RESET);
+        System.out.println();
+    }
 }
