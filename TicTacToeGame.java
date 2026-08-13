@@ -239,4 +239,28 @@ public class TicTacToeGame {
         System.out.println(PURPLE + "╚═══════════════════════════════════════════════════════╝" + RESET);
         System.out.println();
     }
+    public void displayWelcome() {
+        System.out.println();
+        System.out.println(CYAN + "╔═══════════════════════════════════════════════════════╗" + RESET);
+        System.out.println(CYAN + "║                                                       ║" + RESET);
+        System.out.println(
+                CYAN + "║" + BOLD + "     ╔═══╗  ╔═══════════╗  ╔═══╗  ╔═══╗  ╔═══╗" + RESET + CYAN + "     ║" + RESET);
+        System.out.println(
+                CYAN + "║" + BOLD + "     ║   ║  ║           ║  ║   ║  ║   ║  ║   ║" + RESET + CYAN + "     ║" + RESET);
+        System.out.println(
+                CYAN + "║" + BOLD + "     ║   ║  ║           ║  ║   ║  ║   ║  ║   ║" + RESET + CYAN + "     ║" + RESET);
+        System.out.println(
+                CYAN + "║" + BOLD + "     ║   ║  ║   ╔═══╗   ║  ║   ║  ╚═══╣  ╠═══╝" + RESET + CYAN + "     ║" + RESET);
+        System.out.println(
+                CYAN + "║" + BOLD + "     ║   ║  ║   ║   ║   ║  ║   ║      ║  ║    " + RESET + CYAN + "     ║" + RESET);
+        System.out.println(
+                CYAN + "║" + BOLD + "     ║   ║  ║   ╚═══╝   ║  ║   ║      ║  ║    " + RESET + CYAN + "     ║" + RESET);
+        System.out.println(
+                CYAN + "║" + BOLD + "     ╚═══╝  ╚═══════════╝  ╚═══╝  ╚═══╝  ╚═══╝" + RESET + CYAN + "     ║" + RESET);
+        System.out.println(CYAN + "║                                                       ║" + RESET);
+        System.out.println(
+                CYAN + "║" + BOLD + "                  PREMIUM EDITION" + RESET + CYAN + "                  ║" + RESET);
+        System.out.println(CYAN + "╚═══════════════════════════════════════════════════════╝" + RESET);
+        System.out.println();
+    }
 }
