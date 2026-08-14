@@ -80,24 +80,31 @@ public class TicTacToeGame {
             System.out.println(YELLOW + "═══════════════════════════════════" + RESET);
             System.out.print(BOLD + "Player " + colorizePlayer(currentPlayer) +
                     RESET + BOLD + ", enter your move (1-9): " + RESET);
-            int position = scanner.nextInt();
-            scanner.nextLine();
+            try {
+                int position = scanner.nextInt();
+                scanner.nextLine(); // Consume newline
 
-            if (position >= 1 && position <= 9) {
-                int row = (position - 1) / 3;
-                int col = (position - 1) % 3;
+                if (position >= 1 && position <= 9) {
+                    int row = (position - 1) / 3;
+                    int col = (position - 1) % 3;
 
-                if (isValidMove(row, col)) {
-                    board[row][col] = currentPlayer;
-                    movesCount++;
-                    validMove = true;
+                    if (isValidMove(row, col)) {
+                        board[row][col] = currentPlayer;
+                        movesCount++;
+                        validMove = true;
+                        System.out.println();
+                    } else {
+                        System.out.println(RED + "⚠ Invalid move! Position already taken. Try again." + RESET);
+                        System.out.println();
+                    }
                 } else {
-                    System.out.println(RED + "⚠ Invalid move! Position already taken. Try again." + RESET);
+                    System.out.println(RED + "⚠ Invalid input! Please enter a number between 1 and 9." + RESET);
                     System.out.println();
                 }
-            } else {
-                System.out.println(RED + "⚠ Invalid input! Please enter a number between 1 and 9." + RESET);
+            } catch (Exception e) {
+                System.out.println(RED + "⚠ Invalid input! Please enter a valid number." + RESET);
                 System.out.println();
+                scanner.nextLine(); // Clear the invalid input
             }
         }
     }
