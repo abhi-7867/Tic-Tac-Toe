@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 /**
  * Premium Tic-Tac-Toe Game
+ * A complete implementation with statistics, multiple rounds, and enhanced user
+ * experience
  */
 public class TicTacToeGame {
     private char[][] board;
@@ -12,6 +14,7 @@ public class TicTacToeGame {
     private int draws;
     private Scanner scanner;
 
+    // ANSI color codes for premium styling
     private static final String RESET = "\033[0m";
     private static final String RED = "\033[91m";
     private static final String GREEN = "\033[92m";
@@ -21,6 +24,9 @@ public class TicTacToeGame {
     private static final String CYAN = "\033[96m";
     private static final String BOLD = "\033[1m";
 
+    /**
+     * Constructor to initialize the game
+     */
     public TicTacToeGame() {
         board = new char[3][3];
         scanner = new Scanner(System.in);
@@ -30,6 +36,9 @@ public class TicTacToeGame {
         initializeBoard();
     }
 
+    /**
+     * Initialize the board with empty spaces
+     */
     private void initializeBoard() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -40,12 +49,16 @@ public class TicTacToeGame {
         movesCount = 0;
     }
 
+    /**
+     * Display the game board with premium styling
+     */
     public void displayBoard() {
         System.out.println();
         System.out.println(CYAN + "═══════════════════════════════════" + RESET);
         System.out.println(BOLD + PURPLE + "        TIC TAC TOE BOARD" + RESET);
         System.out.println(CYAN + "═══════════════════════════════════" + RESET);
         System.out.println();
+
         System.out.println(BLUE + "     |     |     " + RESET);
         System.out.println(String.format(BLUE + "  %s  |  %s  |  %s  " + RESET,
                 colorizePlayer(board[0][0]),
@@ -68,18 +81,30 @@ public class TicTacToeGame {
         System.out.println(BLUE + "     |     |     " + RESET);
         System.out.println();
     }
-    public void switchPlayer() {
-        currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
+
+    /**
+     * Colorize the player symbols
+     */
+    private String colorizePlayer(char player) {
+        if (player == 'X') {
+            return RED + BOLD + player + RESET;
+        } else if (player == 'O') {
+            return GREEN + BOLD + player + RESET;
+        }
+        return " ";
     }
-    private boolean isValidMove(int row, int col) {
-        return board[row][col] == ' ';
-    }
+
+    /**
+     * Get and validate player input for their move
+     */
     public void playerMove() {
         boolean validMove = false;
+
         while (!validMove) {
             System.out.println(YELLOW + "═══════════════════════════════════" + RESET);
             System.out.print(BOLD + "Player " + colorizePlayer(currentPlayer) +
                     RESET + BOLD + ", enter your move (1-9): " + RESET);
+
             try {
                 int position = scanner.nextInt();
                 scanner.nextLine(); // Consume newline
@@ -108,32 +133,66 @@ public class TicTacToeGame {
             }
         }
     }
+
+    /**
+     * Check if a move is valid
+     */
+    private boolean isValidMove(int row, int col) {
+        return board[row][col] == ' ';
+    }
+
+    /**
+     * Check if the current player has won
+     */
     public boolean checkWin() {
+        // Check rows
         for (int i = 0; i < 3; i++) {
             if (board[i][0] == currentPlayer && board[i][1] == currentPlayer &&
                     board[i][2] == currentPlayer) {
                 return true;
             }
         }
+
+        // Check columns
         for (int i = 0; i < 3; i++) {
             if (board[0][i] == currentPlayer && board[1][i] == currentPlayer &&
                     board[2][i] == currentPlayer) {
                 return true;
             }
         }
+
+        // Check diagonal (top-left to bottom-right)
         if (board[0][0] == currentPlayer && board[1][1] == currentPlayer &&
                 board[2][2] == currentPlayer) {
             return true;
         }
+
+        // Check diagonal (top-right to bottom-left)
         if (board[0][2] == currentPlayer && board[1][1] == currentPlayer &&
                 board[2][0] == currentPlayer) {
             return true;
         }
+
         return false;
     }
+
+    /**
+     * Check if the game is a draw
+     */
     public boolean checkDraw() {
         return movesCount == 9;
     }
+
+    /**
+     * Switch to the other player
+     */
+    public void switchPlayer() {
+        currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
+    }
+
+    /**
+     * Display the winning message
+     */
     public void displayWinMessage() {
         System.out.println();
         System.out.println(GREEN + "╔═══════════════════════════════════╗" + RESET);
@@ -153,6 +212,10 @@ public class TicTacToeGame {
             player2Wins++;
         }
     }
+
+    /**
+     * Display the draw message
+     */
     public void displayDrawMessage() {
         System.out.println();
         System.out.println(YELLOW + "╔═══════════════════════════════════╗" + RESET);
@@ -164,43 +227,10 @@ public class TicTacToeGame {
 
         draws++;
     }
-    public int getPlayer1Wins() {
-        return player1Wins;
-    }
-    public int getPlayer2Wins() {
-        return player2Wins;
-    }
-    public int getDraws() {
-        return draws;
-    }
-    public void close() {
-        scanner.close();
-    }
-    public boolean playRound() {
-        initializeBoard();
-        displayBoard();
-        while (true) {
-            playerMove();
-            displayBoard();
-            if (checkWin()) {
-                displayWinMessage();
-                return true;
-            }
-            if (checkDraw()) {
-                displayDrawMessage();
-                return false;
-            }
-            switchPlayer();
-        }
-    }
-    private String colorizePlayer(char player) {
-        if (player == 'X') {
-            return RED + BOLD + player + RESET;
-        } else if (player == 'O') {
-            return GREEN + BOLD + player + RESET;
-        }
-        return " ";
-    }
+
+    /**
+     * Display game statistics
+     */
     public void displayStatistics() {
         System.out.println();
         System.out.println(CYAN + "╔═══════════════════════════════════╗" + RESET);
@@ -215,6 +245,10 @@ public class TicTacToeGame {
         System.out.println(CYAN + "╚═══════════════════════════════════╝" + RESET);
         System.out.println();
     }
+
+    /**
+     * Display instructions at the start of the game
+     */
     public void displayInstructions() {
         System.out.println();
         System.out.println(PURPLE + "╔═══════════════════════════════════════════════════════╗" + RESET);
@@ -246,6 +280,10 @@ public class TicTacToeGame {
         System.out.println(PURPLE + "╚═══════════════════════════════════════════════════════╝" + RESET);
         System.out.println();
     }
+
+    /**
+     * Display the welcome screen
+     */
     public void displayWelcome() {
         System.out.println();
         System.out.println(CYAN + "╔═══════════════════════════════════════════════════════╗" + RESET);
@@ -269,5 +307,58 @@ public class TicTacToeGame {
                 CYAN + "║" + BOLD + "                  PREMIUM EDITION" + RESET + CYAN + "                  ║" + RESET);
         System.out.println(CYAN + "╚═══════════════════════════════════════════════════════╝" + RESET);
         System.out.println();
+    }
+
+    /**
+     * Close the scanner
+     */
+    public void close() {
+        scanner.close();
+    }
+
+    /**
+     * Play a single round of the game
+     */
+    public boolean playRound() {
+        initializeBoard();
+        displayBoard();
+
+        while (true) {
+            playerMove();
+            displayBoard();
+
+            if (checkWin()) {
+                displayWinMessage();
+                return true;
+            }
+
+            if (checkDraw()) {
+                displayDrawMessage();
+                return false;
+            }
+
+            switchPlayer();
+        }
+    }
+
+    /**
+     * Get player1 wins count
+     */
+    public int getPlayer1Wins() {
+        return player1Wins;
+    }
+
+    /**
+     * Get player2 wins count
+     */
+    public int getPlayer2Wins() {
+        return player2Wins;
+    }
+
+    /**
+     * Get draws count
+     */
+    public int getDraws() {
+        return draws;
     }
 }
