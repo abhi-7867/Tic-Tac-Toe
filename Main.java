@@ -9,5 +9,7 @@ public class Main {
     private static final String BOLD = "\033[1m";
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        TicTacToeGame game = new TicTacToeGame();
     }
 }
