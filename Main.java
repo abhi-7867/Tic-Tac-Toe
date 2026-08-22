@@ -15,4 +15,10 @@ public class Main {
         // Display welcome screen
         game.displayWelcome();
     }
+    private static boolean showInstructions(Scanner scanner) {
+        System.out.println(YELLOW + "═══════════════════════════════════" + RESET);
+        System.out.print(BOLD + "Would you like to see the instructions? (y/n): " + RESET);
+        String response = scanner.nextLine().trim().toLowerCase();
+        return response.equals("y");
+    }
 }
