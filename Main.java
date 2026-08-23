@@ -19,6 +19,6 @@ public class Main {
         System.out.println(YELLOW + "═══════════════════════════════════" + RESET);
         System.out.print(BOLD + "Would you like to see the instructions? (y/n): " + RESET);
         String response = scanner.nextLine().trim().toLowerCase();
-        return response.equals("y");
+        return response.equals("y") || response.equals("yes");
     }
 }
