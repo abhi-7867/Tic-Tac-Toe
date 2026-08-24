@@ -14,6 +14,11 @@ public class Main {
         
         // Display welcome screen
         game.displayWelcome();
+        
+        // Display instructions if requested
+        if (showInstructions(scanner)) {
+            game.displayInstructions();
+        }
     }
     private static boolean showInstructions(Scanner scanner) {
         System.out.println(YELLOW + "═══════════════════════════════════" + RESET);
