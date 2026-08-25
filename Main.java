@@ -19,6 +19,10 @@ public class Main {
         if (showInstructions(scanner)) {
             game.displayInstructions();
         }
+
+        // Main game loop
+        boolean continuePlaying = true;
+        int totalRounds = 0;
     }
     private static boolean showInstructions(Scanner scanner) {
         System.out.println(YELLOW + "═══════════════════════════════════" + RESET);
