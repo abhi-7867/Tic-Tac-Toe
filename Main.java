@@ -23,6 +23,16 @@ public class Main {
         // Main game loop
         boolean continuePlaying = true;
         int totalRounds = 0;
+
+        while (continuePlaying) {
+            totalRounds++;
+            System.out.println();
+            System.out.println(CYAN + "╔═══════════════════════════════════╗" + RESET);
+            System.out.println(String.format(CYAN + "║" + RESET + "        " + BOLD + "ROUND %d" + RESET + 
+                            CYAN + "              ║" + RESET, totalRounds));
+            System.out.println(CYAN + "╚═══════════════════════════════════╝" + RESET);
+            System.out.println();
+        }
     }
     private static boolean showInstructions(Scanner scanner) {
         System.out.println(YELLOW + "═══════════════════════════════════" + RESET);
