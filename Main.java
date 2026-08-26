@@ -32,6 +32,9 @@ public class Main {
                             CYAN + "              ║" + RESET, totalRounds));
             System.out.println(CYAN + "╚═══════════════════════════════════╝" + RESET);
             System.out.println();
+            
+            // Play a round
+            game.playRound();
         }
     }
     private static boolean showInstructions(Scanner scanner) {
