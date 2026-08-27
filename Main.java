@@ -35,6 +35,9 @@ public class Main {
             
             // Play a round
             game.playRound();
+            
+            // Display current statistics
+            game.displayStatistics();
         }
     }
     private static boolean showInstructions(Scanner scanner) {
