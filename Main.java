@@ -38,11 +38,21 @@ public class Main {
             
             // Display current statistics
             game.displayStatistics();
+            
+            // Ask if players want to play another round
+            continuePlaying = askToPlayAgain(scanner);
         }
     }
     private static boolean showInstructions(Scanner scanner) {
         System.out.println(YELLOW + "═══════════════════════════════════" + RESET);
         System.out.print(BOLD + "Would you like to see the instructions? (y/n): " + RESET);
+        String response = scanner.nextLine().trim().toLowerCase();
+        return response.equals("y") || response.equals("yes");
+    }
+    private static boolean askToPlayAgain(Scanner scanner) {
+        System.out.println(YELLOW + "═══════════════════════════════════" + RESET);
+        System.out.print(BOLD + "Would you like to play another round? (y/n): " + RESET);
+        
         String response = scanner.nextLine().trim().toLowerCase();
         return response.equals("y") || response.equals("yes");
     }
