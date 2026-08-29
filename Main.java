@@ -56,4 +56,8 @@ public class Main {
         String response = scanner.nextLine().trim().toLowerCase();
         return response.equals("y") || response.equals("yes");
     }
+    private static double calculatePercentage(int value, int total) {
+        if (total == 0) return 0.0;
+        return (value * 100.0) / total;
+    }
 }
