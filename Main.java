@@ -60,4 +60,14 @@ public class Main {
         if (total == 0) return 0.0;
         return (value * 100.0) / total;
     }
+    private static void displayFinalResults(TicTacToeGame game, int totalRounds) {
+        System.out.println();
+        System.out.println(CYAN + "╔═══════════════════════════════════════════════════════╗" + RESET);
+        System.out.println(CYAN + "║" + BOLD + "                    FINAL RESULTS" + RESET + CYAN + "                    ║" + RESET);
+        System.out.println(CYAN + "╠═══════════════════════════════════════════════════════╣" + RESET);
+        System.out.println(String.format(CYAN + "║" + RESET + "  Total Rounds Played: " + BOLD + "%d" + RESET + 
+                            CYAN + "                            ║" + RESET, totalRounds));
+        System.out.println(CYAN + "╚═══════════════════════════════════════════════════════╝" + RESET);
+        System.out.println();
+    }
 }
