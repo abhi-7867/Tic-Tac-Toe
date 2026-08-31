@@ -67,6 +67,22 @@ public class Main {
         System.out.println(CYAN + "╠═══════════════════════════════════════════════════════╣" + RESET);
         System.out.println(String.format(CYAN + "║" + RESET + "  Total Rounds Played: " + BOLD + "%d" + RESET + 
                             CYAN + "                            ║" + RESET, totalRounds));
+        System.out.println(CYAN + "╠═══════════════════════════════════════════════════════╣" + RESET);
+        
+        int player1Wins = game.getPlayer1Wins();
+        int player2Wins = game.getPlayer2Wins();
+        int draws = game.getDraws();
+        
+        System.out.println(String.format(CYAN + "║" + RESET + "  Player X Wins: " + RED + BOLD + "%d" + RESET + 
+                            CYAN + " (" + "%.1f%%" + CYAN + ")" + "               ║" + RESET, 
+                            player1Wins, calculatePercentage(player1Wins, totalRounds)));
+        System.out.println(String.format(CYAN + "║" + RESET + "  Player O Wins: " + GREEN + BOLD + "%d" + RESET + 
+                            CYAN + " (" + "%.1f%%" + CYAN + ")" + "               ║" + RESET, 
+                            player2Wins, calculatePercentage(player2Wins, totalRounds)));
+        System.out.println(String.format(CYAN + "║" + RESET + "  Draws:         " + YELLOW + BOLD + "%d" + RESET + 
+                            CYAN + " (" + "%.1f%%" + CYAN + ")" + "               ║" + RESET, 
+                            draws, calculatePercentage(draws, totalRounds)));
+        System.out.println(CYAN + "╠═══════════════════════════════════════════════════════╣" + RESET);
         System.out.println(CYAN + "╚═══════════════════════════════════════════════════════╝" + RESET);
         System.out.println();
     }
