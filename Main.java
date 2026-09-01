@@ -83,6 +83,19 @@ public class Main {
                             CYAN + " (" + "%.1f%%" + CYAN + ")" + "               ║" + RESET, 
                             draws, calculatePercentage(draws, totalRounds)));
         System.out.println(CYAN + "╠═══════════════════════════════════════════════════════╣" + RESET);
+        
+        // Determine overall winner
+        if (player1Wins > player2Wins) {
+            System.out.println(String.format(CYAN + "║" + RESET + "  " + RED + BOLD + "🏆 OVERALL WINNER: PLAYER X 🏆" + RESET + 
+                                CYAN + "      ║" + RESET));
+        } else if (player2Wins > player1Wins) {
+            System.out.println(String.format(CYAN + "║" + RESET + "  " + GREEN + BOLD + "🏆 OVERALL WINNER: PLAYER O 🏆" + RESET + 
+                                CYAN + "      ║" + RESET));
+        } else {
+            System.out.println(String.format(CYAN + "║" + RESET + "  " + YELLOW + BOLD + "🤝 TIE GAME! WELL PLAYED! 🤝" + RESET + 
+                                CYAN + "      ║" + RESET));
+        }
+        
         System.out.println(CYAN + "╚═══════════════════════════════════════════════════════╝" + RESET);
         System.out.println();
     }
