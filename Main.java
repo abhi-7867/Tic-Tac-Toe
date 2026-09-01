@@ -42,6 +42,9 @@ public class Main {
             // Ask if players want to play another round
             continuePlaying = askToPlayAgain(scanner);
         }
+        
+        // Display final statistics
+        displayFinalResults(game, totalRounds);
     }
     private static boolean showInstructions(Scanner scanner) {
         System.out.println(YELLOW + "═══════════════════════════════════" + RESET);
