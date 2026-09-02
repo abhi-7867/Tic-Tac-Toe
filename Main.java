@@ -45,6 +45,9 @@ public class Main {
         
         // Display final statistics
         displayFinalResults(game, totalRounds);
+        
+        // Closing message
+        displayClosingMessage();
     }
     private static boolean showInstructions(Scanner scanner) {
         System.out.println(YELLOW + "═══════════════════════════════════" + RESET);
@@ -100,6 +103,17 @@ public class Main {
         }
         
         System.out.println(CYAN + "╚═══════════════════════════════════════════════════════╝" + RESET);
+        System.out.println();
+    }
+    private static void displayClosingMessage() {
+        System.out.println(CYAN + "╔═══════════════════════════════════╗" + RESET);
+        System.out.println(CYAN + "║                                   ║" + RESET);
+        System.out.println(CYAN + "║" + RESET + "  " + BOLD + "Thank you for playing!" + RESET + 
+                           CYAN + "                ║" + RESET);
+        System.out.println(CYAN + "║" + RESET + "  " + BOLD + "Hope you had fun! 😊" + RESET + 
+                           CYAN + "                 ║" + RESET);
+        System.out.println(CYAN + "║                                   ║" + RESET);
+        System.out.println(CYAN + "╚═══════════════════════════════════╝" + RESET);
         System.out.println();
     }
 }
