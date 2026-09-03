@@ -48,6 +48,8 @@ public class Main {
         
         // Closing message
         displayClosingMessage();
+        
+        scanner.close();
     }
     private static boolean showInstructions(Scanner scanner) {
         System.out.println(YELLOW + "═══════════════════════════════════" + RESET);
