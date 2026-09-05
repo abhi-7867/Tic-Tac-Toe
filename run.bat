@@ -1,0 +1,3 @@
+@echo off
+echo Compiling...
+javac Main.java TicTacToeGame.java
