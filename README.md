@@ -19,3 +19,8 @@ A console-based Tic-Tac-Toe game implemented in Java.
 javac Main.java TicTacToeGame.java
 java Main
 ```
+
+## Launcher Scripts
+
+- Windows: `run.bat`
+- Linux/macOS: `./run.sh`
